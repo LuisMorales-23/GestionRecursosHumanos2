@@ -1,11 +1,13 @@
 using GestionRecursosHumanos2.Data;
 using GestionRecursosHumanos2.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
 namespace GestionRecursosHumanos2.Pages.Nomina
 {
+    [Authorize]
     public class IndexModel : PageModel
     {
         private readonly GestionRecursosContext _context;
